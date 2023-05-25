@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    name:<input type="text" name="name" id="txt1">
+    pwd:<input type="number" name="pass" id="txt2">
+    <input type="submit" id="button">
+    <script>
+        $(document).ready(function(){
+            $('#txt1').bind("blur",function()            {
+                $('#txt1').css({'background-color' : 'red'});
+                // alert("bining successfully")            })
+
+            $('#txt1').bind("mouseenter",function()
+            {
+                $('#txt1').css({'background-color' : 'green'});
+                // alert("bining successfully")            })
+
+            $('#button').click(function(){
+                $('#txt1').unbind()
+                $('#txt1').css({'background-color':'white'})
+            })
+        })
+    </script>    
+</body>
+
+    
+</body>
+</html>
